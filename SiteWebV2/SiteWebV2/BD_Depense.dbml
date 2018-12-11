@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Depenses" Class="BD_DepenseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Depenses;Integrated Security=True" SettingsObjectName="SiteWebV2.Properties.Settings" SettingsPropertyName="DepensesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.T_Connexion" Member="T_Connexion">
+    <Type Name="T_Connexion">
+      <Column Name="idCo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="T_Connexion_T_FactureGaz" Member="T_FactureGaz" ThisKey="idCo" OtherKey="idCo" Type="T_FactureGaz" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_FactureGaz" Member="T_FactureGaz">
+    <Type Name="T_FactureGaz">
+      <Column Name="idFac" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nbKilo" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="cout" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="idCo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="T_Connexion_T_FactureGaz" Member="T_Connexion" ThisKey="idCo" OtherKey="idCo" Type="T_Connexion" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
