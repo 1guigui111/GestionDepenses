@@ -25,3 +25,5 @@ CREATE TABLE T_FactureGaz(
 	CONSTRAINT fkIdCo FOREIGN KEY (idCo) REFERENCES T_Connexion(idCo)
 
 )
+
+INSERT INTO T_Connexion(username) VALUES ('admin')
