@@ -1,8 +1,10 @@
 USE master
 GO
 DROP DATABASE Depenses
+GO
 
 CREATE DATABASE Depenses
+GO
 USE Depenses
 GO
 
