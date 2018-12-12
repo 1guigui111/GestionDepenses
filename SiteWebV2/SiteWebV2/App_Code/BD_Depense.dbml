@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Depenses" Class="BD_DepenseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Depenses;Integrated Security=True" SettingsObjectName="SiteWebV2.Properties.Settings" SettingsPropertyName="DepensesConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=Depenses;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SiteWebV2.Properties.Settings.DepensesConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.T_Connexion" Member="T_Connexion">
     <Type Name="T_Connexion">
       <Column Name="idCo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
