@@ -14,10 +14,16 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btn_connexion_Click(object sender, EventArgs e)
     {
-        T_Connexion co = SiteWebV2.CoBD.GetConnexionByUserName(tbx_username.Text);
+        T_Connexion co = SiteWebV2.CoBD.GetConnexionByUserName(tbx_username.Text, tbx_password.Text);
         if(co != null)
         {
-            Response.Redirect("Test.aspx");
+            ajouterSession(co);
+            Response.Redirect("Acceuil.aspx");
         }
+    }
+
+    private void ajouterSession(T_Connexion co)
+    {
+        Session["idCo"] = co.idCo;
     }
 }

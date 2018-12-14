@@ -10,33 +10,50 @@ namespace SiteWebV2
     {
         public static List<T_Connexion> GetListConnexion()
         {
-            BD_DepenseDataContext bd = new BD_DepenseDataContext();
-<<<<<<< HEAD
-            //List<T_Connexion> lstConnexion = bd.T_Connexion.ToList();
-            Table<T_Connexion> t;
-            return null;
-=======
+            DepenseBDDataContext bd = new DepenseBDDataContext();
             List<T_Connexion> lstConnexion = bd.T_Connexion.ToList();
             bd.Dispose();
             return lstConnexion;
         }
 
-        public static T_Connexion GetConnexionByUserName(string p_username)
+        public static T_Connexion GetConnexionByUserName(string p_username, string password)
         {
+            DepenseBDDataContext bd = new DepenseBDDataContext();
             try
             {
-                BD_DepenseDataContext bd = new BD_DepenseDataContext();
-                T_Connexion co = bd.T_Connexion.Single(f => f.username == p_username);
+                T_Connexion co = bd.T_Connexion.Single(f => f.username == p_username && f.pwd == password);
                 bd.Dispose();
                 return co;
             }
             catch(System.InvalidOperationException ex)
             {
-                
+                bd.Dispose();
+                return null;
             }
-            return null;
-            
->>>>>>> 20890dd58785f01b25fa2903ebd5bda5a4035512
+        }
+
+        public static void AjouterGaz(T_FactureGaz newfac)
+        {
+            DepenseBDDataContext bd = new DepenseBDDataContext();
+            bd.T_FactureGaz.InsertOnSubmit(newfac);
+            bd.SubmitChanges();
+            bd.Dispose();
+        }
+
+        public static List<T_FactureGaz> GetListFacGaz()
+        {
+            DepenseBDDataContext bd = new DepenseBDDataContext();
+            List<T_FactureGaz> rtnList = bd.T_FactureGaz.ToList();
+            bd.Dispose();
+            return rtnList;
+        }
+
+        public static T_Connexion GetCoById(int id)
+        {
+            DepenseBDDataContext bd = new DepenseBDDataContext();
+            T_Connexion co = bd.T_Connexion.Single(f => f.idCo == id);
+            bd.Dispose();
+            return co;
         }
     }
 }

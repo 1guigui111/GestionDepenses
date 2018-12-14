@@ -4,18 +4,32 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="cph_title" runat="server" />
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+        <header>
+            <ul>
+                <li>
+                    <div>
+                        <a href="Acceuil.aspx" >Acceuil</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="AddFactureGaz.aspx" >Ajout</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+
+        <div>
+            <asp:contentplaceholder ID="Content" runat="server"></asp:contentplaceholder>
+        </div>
     </form>
 </body>
 </html>
