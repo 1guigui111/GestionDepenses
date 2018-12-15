@@ -11,8 +11,9 @@
   <Table Name="dbo.T_FactureGaz" Member="T_FactureGaz">
     <Type Name="T_FactureGaz">
       <Column Name="idFac" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="nbKilo" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
-      <Column Name="cout" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="nbKilo" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="litre" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="cout" Type="System.Decimal" DbType="SmallMoney" CanBeNull="true" />
       <Column Name="ddate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="idCo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="T_Connexion_T_FactureGaz" Member="T_Connexion" ThisKey="idCo" OtherKey="idCo" Type="T_Connexion" IsForeignKey="true" />

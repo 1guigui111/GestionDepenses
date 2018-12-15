@@ -1,35 +1,43 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PageMaitre.master.cs" Inherits="PageMaitre" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Happy+Monkey" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>
         <asp:ContentPlaceHolder ID="cph_title" runat="server" />
     </title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
+        <nav id="Sidebar" class="navbar navbar-inverse sidebar" role="navigation">
             <ul>
                 <li>
                     <div>
-                        <a href="Acceuil.aspx" >Acceuil</a>
+                        <a href="Acceuil.aspx">Acceuil</a>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <a href="AddFactureGaz.aspx" >Ajout</a>
+                        <a href="AddFactureGaz.aspx">Ajout</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <asp:Button runat="server" ID="btn_deco" Text="Déconnexion" OnClick="btn_deco_Click" />
                     </div>
                 </li>
             </ul>
-        </header>
-
+        </nav>
         <div>
-            <asp:contentplaceholder ID="Content" runat="server"></asp:contentplaceholder>
+            <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
         </div>
     </form>
+    <script src="”js/jquery-3.3.1.min.js”"></script>
+    <script src="”js/popper.min.js”"></script>
+    <script src="”js/bootstrap.min.js”"></script>
 </body>
 </html>

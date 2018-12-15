@@ -8,17 +8,17 @@
         <elementListCompartment Id="5cb6067d-78b6-447f-8dca-ead493abf5d9" absoluteBounds="4.39, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="047d453e-472c-4b7a-926d-7b42a5a592c8" absoluteBounds="4.75, 1.375, 2, 1.7708968098958331">
+    <classShape Id="493ff79f-c9f6-4500-998f-301c0a559f6c" absoluteBounds="5.875, 2.125, 2, 1.9631982421875">
       <DataClassMoniker Name="/DepenseBDDataContext/T_FactureGaz" />
       <nestedChildShapes>
-        <elementListCompartment Id="9d2f38fe-928c-4ecb-9978-71ecec309b22" absoluteBounds="4.765, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="30e14923-67a6-4825-95e9-a621c01cc36d" absoluteBounds="5.89, 2.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.5625 : 4); (5.5625 : 3.14589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.375 : 4.73724659375); (7.1250005 : 4.73724659375); (7.1250005 : 4.0881982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/DepenseBDDataContext/T_Connexion/T_Connexion_T_FactureGaz" />
       <nodes>
         <classShapeMoniker Id="831a6cfe-7311-4234-bc4e-258333661f00" />
-        <classShapeMoniker Id="047d453e-472c-4b7a-926d-7b42a5a592c8" />
+        <classShapeMoniker Id="493ff79f-c9f6-4500-998f-301c0a559f6c" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

@@ -230,9 +230,11 @@ public partial class T_FactureGaz : INotifyPropertyChanging, INotifyPropertyChan
 	
 	private int _idFac;
 	
-	private System.Nullable<decimal> _nbKilo;
+	private System.Nullable<float> _nbKilo;
 	
-	private System.Nullable<float> _cout;
+	private System.Nullable<float> _litre;
+	
+	private System.Nullable<decimal> _cout;
 	
 	private System.Nullable<System.DateTime> _ddate;
 	
@@ -246,9 +248,11 @@ public partial class T_FactureGaz : INotifyPropertyChanging, INotifyPropertyChan
     partial void OnCreated();
     partial void OnidFacChanging(int value);
     partial void OnidFacChanged();
-    partial void OnnbKiloChanging(System.Nullable<decimal> value);
+    partial void OnnbKiloChanging(System.Nullable<float> value);
     partial void OnnbKiloChanged();
-    partial void OncoutChanging(System.Nullable<float> value);
+    partial void OnlitreChanging(System.Nullable<float> value);
+    partial void OnlitreChanged();
+    partial void OncoutChanging(System.Nullable<decimal> value);
     partial void OncoutChanged();
     partial void OnddateChanging(System.Nullable<System.DateTime> value);
     partial void OnddateChanged();
@@ -282,8 +286,8 @@ public partial class T_FactureGaz : INotifyPropertyChanging, INotifyPropertyChan
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nbKilo", DbType="SmallMoney")]
-	public System.Nullable<decimal> nbKilo
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nbKilo", DbType="Real")]
+	public System.Nullable<float> nbKilo
 	{
 		get
 		{
@@ -302,8 +306,28 @@ public partial class T_FactureGaz : INotifyPropertyChanging, INotifyPropertyChan
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cout", DbType="Real")]
-	public System.Nullable<float> cout
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_litre", DbType="Real")]
+	public System.Nullable<float> litre
+	{
+		get
+		{
+			return this._litre;
+		}
+		set
+		{
+			if ((this._litre != value))
+			{
+				this.OnlitreChanging(value);
+				this.SendPropertyChanging();
+				this._litre = value;
+				this.SendPropertyChanged("litre");
+				this.OnlitreChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cout", DbType="SmallMoney")]
+	public System.Nullable<decimal> cout
 	{
 		get
 		{

@@ -9,6 +9,10 @@
         <asp:TextBox runat="server" ID="tbx_nbKilo" />
     </div>
     <div>
+        <asp:Label runat="server" ID="lbl_litre" Text="Litre consommé" />
+        <asp:TextBox runat="server" ID="tbx_litre" />
+    </div>
+    <div>
         <asp:Label runat="server" ID="lbl_cout" Text="Coût" />
         <asp:TextBox runat="server" ID="tbx_cout" />
     </div>

@@ -8,8 +8,8 @@ using System.Web;
 /// </summary>
 public class Utilitaires
 {
-    public float GetAutonomie(float kilo, float cout)
+    public static float GetAutonomie(float kilo, float consomme)
     {
-        return (cout * 100) / kilo;
+        return (consomme * 100) / kilo;
     }
 }

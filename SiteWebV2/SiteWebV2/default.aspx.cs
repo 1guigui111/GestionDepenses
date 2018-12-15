@@ -9,12 +9,12 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        tbx_username.Focus();
     }
 
     protected void btn_connexion_Click(object sender, EventArgs e)
     {
-        T_Connexion co = SiteWebV2.CoBD.GetConnexionByUserName(tbx_username.Text, tbx_password.Text);
+        T_Connexion co = CoBD.GetConnexionByUserName(tbx_username.Text, tbx_password.Text);
         if(co != null)
         {
             ajouterSession(co);

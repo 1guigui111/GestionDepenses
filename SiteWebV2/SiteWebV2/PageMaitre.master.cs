@@ -11,4 +11,10 @@ public partial class PageMaitre : System.Web.UI.MasterPage
     {
 
     }
+
+    protected void btn_deco_Click(object sender, EventArgs e)
+    {
+        Session["idCo"] = null;
+        Response.Redirect("Default.aspx");
+    }
 }
